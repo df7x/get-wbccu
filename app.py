@@ -6,7 +6,7 @@ import pytz
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 import config
-import demo
+import getWBCCU
 
 
 class DailyGreeter:
@@ -90,7 +90,7 @@ def simple_hello():
 
     def _greeter(current_time: datetime.datetime):
         print(f"本次任务执行时间：[{current_time.strftime('%Y-%m-%d %H:%M:%S')}]")
-        demo.start_get_wbccu()
+        getWBCCU.start_get_wbccu()
 
     service = DailyGreeter()
     service.set_daily_task(_greeter)
