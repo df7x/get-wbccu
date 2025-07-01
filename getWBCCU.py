@@ -251,7 +251,7 @@ def process_ship_data(params_ship_list, params_id_list):
                 html_body += f'<div class="div"><img src="{ship["img"]}"><span class="name">{ship["name"]}</span><span>&nbsp;{ship["original_price"]}&nbsp;-&nbsp;{ship["wb_price"]}&nbsp;=&nbsp;{ship["saving_price"]}$</span></div>'
             html_body += "</body></html>"
 
-            email_send.send_email(subject, html_body, to_email, from_email, smtp_server, smtp_port, login, password)
+            emailSend.send_email(subject, html_body, to_email, from_email, smtp_server, smtp_port, login, password)
     else:
         print("今日暂无WB CCU")
 
